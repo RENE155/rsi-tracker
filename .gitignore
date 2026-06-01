@@ -1,0 +1,50 @@
+# === Priklausomybės / dependencies ===
+node_modules/
+.pnp
+.pnp.js
+
+# === Expo ===
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# === Natyvūs aplankai (generuojami su `expo prebuild`) ===
+/mobile/ios/
+/mobile/android/
+
+# === Raktai / sertifikatai – NIEKADA necommitinti ===
+*.jks
+*.p8
+*.p12
+*.key
+*.pem
+*.mobileprovision
+*.keystore
+google-services.json
+GoogleService-Info.plist
+*googleusercontent.com.plist
+
+# === Aplinkos kintamieji / secrets ===
+.env
+.env.*
+!.env.example
+
+# === Python (backend) ===
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+
+# === Build artefaktai ===
+*.aab
+*.apk
+*.ipa
+
+# === Sistema / redaktoriai ===
+.DS_Store
+*.log
+.vscode/
+.idea/

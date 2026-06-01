@@ -1,0 +1,20 @@
+diff --git a/node_modules/expo-localization/android/build.gradle b/node_modules/expo-localization/android/build.gradle
+index 50b2ff1..d062cb1 100644
+--- a/node_modules/expo-localization/android/build.gradle
++++ b/node_modules/expo-localization/android/build.gradle
+@@ -1,7 +1,11 @@
+-plugins {
+-  id 'com.android.library'
+-  id 'expo-module-gradle-plugin'
+-}
++apply plugin: 'com.android.library'
++
++def expoModulesCorePlugin = new File(project(":expo-modules-core").projectDir.absolutePath, "ExpoModulesCorePlugin.gradle")
++apply from: expoModulesCorePlugin
++applyKotlinExpoModulesCorePlugin()
++useCoreDependencies()
++useDefaultAndroidSdkVersions()
++useExpoPublishing()
+ 
+ group = 'host.exp.exponent'
+ version = '17.0.8'
